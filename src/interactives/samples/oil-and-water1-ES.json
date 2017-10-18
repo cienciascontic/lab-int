@@ -1,0 +1,29 @@
+{
+  "title": "Aceite y Agua",
+  "publicationStatus": "sample",
+  "subtitle": "Explorar cómo interactúan entre elas las sustancias polares y no-polares.",
+  "about": [
+    "Es bien conocido que \"aceite y agua no se mezclan.\" ¿Pero por qué? Observar las ",
+    "interacciones de agua (polar, azul y rojo) y aceite (no-polar, gris). \"Arrastrar las moléculas unas cerca de",
+    " otras,\" y observar los diferentes tipos de fuerzas de atracción."
+  ],
+  "i18nMetadata": "locales/metadata/oil-and-water.json",
+  "models": [
+    {
+      "type": "md2d",
+      "id": "page3$1",
+      "url": "models/oil-and-water/oil-and-water1.json",
+      "viewOptions": {
+        "controlButtons": false,
+        "textBoxes": [
+        ]
+      }
+    }
+  ],
+  "components": [
+  ],
+  "layout": {
+    "bottom": [
+    ]
+  }
+}
