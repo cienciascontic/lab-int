@@ -1,5 +1,5 @@
 {
-  "title": "Dissolve Compare",
+  "title": "Disolver Comparar",
   "publicationStatus": "draft",
   "subtitle": "",
   "about": "",
@@ -25,7 +25,7 @@
     {
       "type": "pulldown",
       "id": "model-pulldown",
-      "label": "Select",
+      "label": "Seleccionar",
       "labelOn": "left",
       "options": [
         {
@@ -33,7 +33,7 @@
           "loadModel": "DissolveCompare$0"
         },
         {
-          "text": "Nonpolar/nonpolar",
+          "text": "No-polar/no-polar",
           "loadModel": "DissolveCompare$1"
         }
       ]
@@ -41,7 +41,7 @@
     {
       "type": "button",
       "id": "remove-barrier",
-      "text": "Remove barrier",
+      "text": "Quitar barrera",
       "action": "if (getNumberOfObstacles() > 0) { removeObstacle(0) };"
     }
   ],
