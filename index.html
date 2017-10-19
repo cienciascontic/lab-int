@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
-    <title>HTML5-based scientific models, visualizations, graphing, and probeware</title>
+    <title>Modelos científicos, visualizaciones, gráficas y sensores basados en HTML5</title>
     <script src='vendor/modernizr/modernizr.js' type='text/javascript'></script>
     <script src='vendor/d3/d3.js' type='text/javascript'></script>
     <script src='vendor/jquery/jquery.min.js' type='text/javascript'></script>
@@ -42,42 +42,38 @@
       <div class='column1'>
         <div class='item-list'>
           <p>
-            In November 2011 the Google Foundation awarded Concord Consortium a grant to develop an
-            HTML5 version of Molecular Workbench our award-winning Java-based physics simulation.
-            We've extended these goals and have created a general framework we call Lab for integrating
-            both simulations running in multiple modeling engines and data collection from sensors and
-            probes.
+            En noviembre de 2011, la Fundación Google otorgó a Concord Consortium una subvención para desarrollar una versión en HTML5 de Molecular Workbench, nuestra galardonada simulación de física basada en Java. Hemos ampliado estos objetivos y hemos creado un marco general que llamamos Lab para la integración de ambas simulaciones ejecutándose en múltiples motores de modelado y la recopilación de datos de sensores y sondas.
           </p>
           <p>
-            Lab Interactives are sharable, embeddable, and authorable components defined in JSON
-            that wrap a model with additional inquiry-oriented user interface components such as
-            buttons, checkboxes, sliders, graphs etc.
+            Los Lab Interactivos se pueden compartir, embeber y customizar definiéndolos en archivos JSON
+            que empaquetan el modelo junto componentes de la interfaz orientados a la indagación como 
+            botones, casillas de verificación, deslizadores, gráficos, etc.
           </p>
           <ul>
             <li>
-              <a href='interactives.html'>Browse all Interactives</a>
+              <a href='interactives.html'>Navegar todos los interactivos</a>
             </li>
           </ul>
           <p>
-            Here's an example Interactive using MD2D, our 2D Molecular dynamics engine for
-            exploring the emergent dynamics of a simple 2D model of charged and neutral atoms.
+            Acá hay un ejemplo de un interactivo usando MD2D, nuestro motor 2D de modelado molecular dinámico 
+            para explorar la dinámica emergente de un modelo simple en 2D de átomos cargados y neutros.
           </p>
           <blockquote>
             <p>
-              Charged and Neutral Atoms: Explore Coulomb and intermolecular attractions.
+              Átomos neutrales y cargados: Explorar Coulomb y las atracciones intermoleculares.
             </p>
             <div class='iframe-container'>
               <iframe allowfullscreen='true' height='315' mozallowfullscreen='true' scrolling='no' src='embeddable.html#interactives/samples/4-100-atoms-conceptual.json' webkitallowfullscreen='true' width='400'></iframe>
             </div>
             <p>
-              There are two kinds of attractive forces shown in this model: Coulomb forces
-              (the attraction between ions) and Van der Waals forces (an additional attractive
-              force between all atoms).
+              Hay dos clases de fuerzas atractivas que se muestran en este modelo: fuerzas de Coulomb 
+              (la atracción entre iones) y las fuerzas de Van der Waal (una fuerza atractiva adicional 
+              entre todos los átomos.
             </p>
             <p>
-              What kinds of patterns tend to form with charged and neutral atoms? How does
-              changing the Van der Waals attraction or charging the atoms affect the melting
-              and boiling point of the substance?
+              Qué tipo de patrones tienden a formarse con átomos cargados y neutros? ¿De qué
+               manera cambiando la atracción de Van der Waals o cargando los átomos afecta
+               el punto de fusión y/o de ebullición de la sustancia?
             </p>
           </blockquote>
         </div>
@@ -85,43 +81,44 @@
       <div class='column2'>
         <div class='item-list'>
           <p>
-            The following different
-            <a href='doc/models/index.html'>model types</a>
-            can be used in Interactives.
+            Los siguientes diferentes 
+            <a href='doc/models/index.html'>tipos de modelos </a>
+            pueden usarse en los interactivos.
           </p>
           <ul>
             <li>
-              <a href='doc/models/md2d/index.html'>Next Generation Molecular Workbench</a>
+              <a href='doc/models/md2d/index.html'>Molecular Workbench La Nueva Generación</a>
             </li>
             <li>
               <a href='doc/models/energy2d/index.html'>Energy2D</a>
             </li>
             <li>
-              <a href='doc/models/solar-system/index.html'>Solar System</a>
+              <a href='doc/models/solar-system/index.html'>Sistema Solar</a>
             </li>
             <li>
-              <a href='doc/probeware/index.html'>Probeware</a>
+              <a href='doc/probeware/index.html'>Sensores</a>
             </li>
           </ul>
           <p>
-            Bar and line graphs can also be integrated into Interactives.
+            En los interactivos también pueden integrarse gráficos de barra y línea.
           </p>
           <ul>
             <li>
-              <a href='examples/grapher/grapher.html'>Basic Grapher</a>
+              <a href='examples/grapher/grapher.html'>Graficador Básico</a>
             </li>
             <li>
-              <a href='examples/grapher-bar-graph/bar-graph.html'>Bar Graph</a>
+              <a href='examples/grapher-bar-graph/bar-graph.html'>Graficador de barras</a>
             </li>
             <li>
-              <a href='experiments/dsp/dsp.html'>Digital Signal Processing Graphs</a>
+              <a href='experiments/dsp/dsp.html'>Procesamiento gráfico de señales digitales</a>
             </li>
           </ul>
-          <h2>Performance</h2>
+          <h2>Desempeño</h2>
           <p>
-            From the beginning we've kept a close eye on performance and extensibility. Performance
-            is best running in the latest browsers running on desktop computers however many of the
-            simpler models also run acceptably on tablets and smartphones.
+               Desde el principio, hemos seguido de cerca el rendimiento y la extensibilidad. 
+            El rendimiento se ejecuta mejor en los últimos navegadores que se ejecutan en computadoras de escritorio, 
+            sin embargo, muchos de los modelos más simples también funcionan de forma aceptable en tabletas y teléfonos 
+            inteligentes.
           </p>
           <p>
             Performance benchmarking can be run for every Interactive displayed in the
@@ -130,14 +127,14 @@
           <h2>Testing</h2>
           <ul>
             <li>
-              <a href='doc/interactives/sampler/index.html'>Interactive Sampler</a>
+              <a href='doc/interactives/sampler/index.html'>Ejemplos de interactivos</a>
             </li>
             <li>
-              <a href='doc/interactives/sampler/errors.html'>Embedded Interactives with Errors</a>
+              <a href='doc/interactives/sampler/errors.html'>Interactivos embebidos con errores</a>
             </li>
           </ul>
           <h3>
-            <a href='experiments/index.html'>Experiments</a>
+            <a href='experiments/index.html'>Experimentos</a>
           </h3>
         </div>
       </div>
