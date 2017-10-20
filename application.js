@@ -406,7 +406,7 @@ AUTHORING = false;
     $selectInteractive.empty();
     $selectInteractive.append($("<option>")
           .attr('value', 'select')
-          .text("Select an Interactive ...")
+          .text("Seleccionar un interactivo ...")
           .attr('disabled', true));
     saveOptionsToCookie();
     interactives = interactiveDescriptions.interactives;
@@ -416,8 +416,8 @@ AUTHORING = false;
           benchmarksFilter = $("#benchmarks-filter").is(':checked'),
           testsFilter = $("#tests-filter").is(':checked');
       if (group.category === "Samples") return true;
-      if (curriculumFilter && group.category === "Curriculum") return true;
-      if (examplesFilter && group.category === "Examples") return true;
+      if (curriculumFilter && group.category === "Curriculares") return true;
+      if (examplesFilter && group.category === "Ejemplos") return true;
       if (benchmarksFilter && group.category === "Benchmarks") return true;
       if (testsFilter && group.category === "Tests") return true;
       return false;
