@@ -2,7 +2,7 @@
 <html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
   <head>
     <title>
-      Lab: Technical Documentation
+      Lab: Documentación técnica
     </title>
     <meta content='text/xhtml; charset=utf-8' http-equiv='content-type'>
     <meta content='all' name='distribution'>
@@ -14,12 +14,12 @@
     <div id="main">
       <h1 id="lab-framework">Lab Framework</h1>
 
-<p>HTML5-based open source scientific models, visualizations, graphing, and probeware from the
+<p>Modelos científicos, visualizaciones, gráficos y sensores basados en HTML5 del 
 <a href="http://www.concord.org">Concord Consortium</a>.</p>
 
 <ul>
-  <li><strong><a href="http://lab.concord.org/">lab.concord.org</a></strong> <em>(production)</em></li>
-  <li><strong><a href="http://lab.dev.concord.org/">lab.dev.concord.org</a></strong> <em>(development)</em></li>
+  <li><strong><a href="http://lab.concord.org/">lab.concord.org</a></strong> <em>(producción)</em></li>
+  <li><strong><a href="http://lab.dev.concord.org/">lab.dev.concord.org</a></strong> <em>(desarrollo)</em></li>
   <li><strong><a href="http://lab.dev.concord.org/readme.html">Developer Readme</a></strong> <em>(working demo links)</em></li>
   <li><strong><a href="https://github.com/concord-consortium/lab">github.com/concord-consortium/lab</a></strong> <em>(source)</em></li>
 </ul>
@@ -29,34 +29,34 @@
 A live version of the readme is always available here:
 <a href="http://lab.dev.concord.org/readme.html">lab.dev.concord.org/readme.html</a>.</em></p>
 
-<p><strong>Table of Contents</strong></p>
+<p><strong>Tabla de contenidos</strong></p>
 
 <ul id="markdown-toc">
   <li><a href="#licensing">Licensing</a></li>
-  <li><a href="#model-type-examples">Model-type examples</a>    <ul>
-      <li><a href="#md2d-model-type-2d-molecular-modeling">MD2D model-type: 2D molecular modeling</a>        <ul>
-          <li><a href="#md2d-basic-2d-molecular-modeling">MD2D: Basic 2D molecular modeling</a></li>
-          <li><a href="#md2d-using-macroscopic-units-with-the-molecular-modeling-engine">MD2D: Using macroscopic units with the molecular modeling engine</a></li>
-          <li><a href="#md2d-protein-and-dna">MD2D: Protein and DNA</a></li>
-          <li><a href="#md2d-light-and-matter-simple-quantum-dymanics">MD2D: Light and Matter (simple quantum dymanics)</a></li>
+  <li><a href="#model-type-examples">Ejemplos por tipos de modelos</a>    <ul>
+      <li><a href="#md2d-model-type-2d-molecular-modeling">Modelo tipo MD2D: modelado molecular en 2D</a>        <ul>
+          <li><a href="#md2d-basic-2d-molecular-modeling">MD2D: Modelado molecular en 2D básico</a></li>
+          <li><a href="#md2d-using-macroscopic-units-with-the-molecular-modeling-engine">MD2D: Usar unidades macroscópicas con el motor de modelado molecular</a></li>
+          <li><a href="#md2d-protein-and-dna">MD2D: Proteína y DNA</a></li>
+          <li><a href="#md2d-light-and-matter-simple-quantum-dymanics">MD2D: Luz y materia (dinámica cuántica simple)</a></li>
         </ul>
       </li>
-      <li><a href="#solar-system-model-type">Solar System model-type</a></li>
-      <li><a href="#signal-generator-model-type">Signal generator model-type</a></li>
-      <li><a href="#probeware-sensor-model-type">Probeware (sensor) model-type</a></li>
+      <li><a href="#solar-system-model-type">Modelos tipo Sistema Solar</a></li>
+      <li><a href="#signal-generator-model-type">Modelos tipo generador de señal</a></li>
+      <li><a href="#probeware-sensor-model-type">Modelos tipo Probeware (para sensores) </a></li>
     </ul>
   </li>
-  <li><a href="#additional-examples">Additional examples</a>    <ul>
-      <li><a href="#graphing-examples">Graphing examples</a></li>
+  <li><a href="#additional-examples">Ejemplos adicionales</a>    <ul>
+      <li><a href="#graphing-examples">Ejemplos de gráfico</a></li>
       <li><a href="#probeware">Probeware</a></li>
-      <li><a href="#energy2d-thermal-simulation">Energy2D: thermal simulation</a></li>
+      <li><a href="#energy2d-thermal-simulation">Energy2D: simulación térmica</a></li>
     </ul>
   </li>
-  <li><a href="#distribution-of-project-and-examples">Distribution of Project and Examples</a></li>
-  <li><a href="#setup-development">Setup Development</a>    <ul>
-      <li><a href="#prerequisites">Prerequisites:</a>        <ul>
-          <li><a href="#rvm-ruby-20-and-the-rubygem-bundler">RVM, Ruby 2.0 and the RubyGem bundler</a></li>
-          <li><a href="#nodejs-and-npm-the-node-package-manager">nodejs and npm, the Node Package Manager</a></li>
+  <li><a href="#distribution-of-project-and-examples">Distribución del proyecto y ejemplos</a></li>
+  <li><a href="#setup-development">Configurar desarrollo</a>    <ul>
+      <li><a href="#prerequisites">Prerequisitos:</a>        <ul>
+          <li><a href="#rvm-ruby-20-and-the-rubygem-bundler">RVM, Ruby 2.0 y el RubyGem bundler</a></li>
+          <li><a href="#nodejs-and-npm-the-node-package-manager">nodejs y npm, el Node Package Manager</a></li>
           <li><a href="#java">Java</a>            <ul>
               <li><a href="#customize-maven-mirror">Customize Maven mirror</a></li>
             </ul>
@@ -64,11 +64,11 @@ A live version of the readme is always available here:
         </ul>
       </li>
       <li><a href="#linux-ubuntu">Linux (Ubuntu)</a>        <ul>
-          <li><a href="#nodejs-and-npm">nodejs and npm</a></li>
-          <li><a href="#known-problems-with-linux-during-lab-build-process">Known problems with Linux during Lab build process</a></li>
+          <li><a href="#nodejs-and-npm">nodejs y npm</a></li>
+          <li><a href="#known-problems-with-linux-during-lab-build-process">Problemas conocidos con Linux durante el proceso de build</a></li>
         </ul>
       </li>
-      <li><a href="#use-git-to-create-a-local-clone-of-the-lab-repository">Use git to create a local clone of the Lab repository.</a></li>
+      <li><a href="#use-git-to-create-a-local-clone-of-the-lab-repository">Usar git para crear un clon de repositorio de Lab.</a></li>
       <li><a href="#setup-the-local-lab-repository-for-development">Setup the local Lab repository for development</a>        <ul>
           <li><a href="#automatic-build-processing-using-guard">Automatic build processing using Guard</a></li>
           <li><a href="#startup-the-rack-based-lab-server-for-local-development">Startup the Rack-based Lab server for local development</a>            <ul>
@@ -90,7 +90,7 @@ A live version of the readme is always available here:
       </li>
     </ul>
   </li>
-  <li><a href="#project-configuration">Project Configuration</a>    <ul>
+  <li><a href="#project-configuration">Configuración del proyecto</a>    <ul>
       <li><a href="#interactive-share-link">Interactive Share link</a></li>
       <li><a href="#google-analytics">Google Analytics</a></li>
       <li><a href="#limitations-changing-configuration-in-an-archive-distribution">Limitations changing configuration in an archive distribution</a></li>
@@ -149,18 +149,18 @@ A live version of the readme is always available here:
       </li>
     </ul>
   </li>
-  <li><a href="#physical-constants-and-units">Physical constants and units</a>    <ul>
-      <li><a href="#units">Units</a></li>
-      <li><a href="#physical-constants">Physical Constants</a></li>
-      <li><a href="#unit-conversions">Unit conversions</a>        <ul>
-          <li><a href="#converting-a-value-between-two-unit-types">Converting a value between two unit types:</a></li>
-          <li><a href="#finding-the-ratio-between-two-unit-types-and-rolling-your-own-unit-conversions">Finding the ratio between two unit types and rolling your own unit conversions:</a></li>
+  <li><a href="#physical-constants-and-units">Constantes físicas y unidades</a>    <ul>
+      <li><a href="#units">Unidades</a></li>
+      <li><a href="#physical-constants">Constantes físicas</a></li>
+      <li><a href="#unit-conversions">Conversión de unidades</a>        <ul>
+          <li><a href="#converting-a-value-between-two-unit-types">Convertir un valor entre dos tipos de unidades:</a></li>
+          <li><a href="#finding-the-ratio-between-two-unit-types-and-rolling-your-own-unit-conversions">Encontrar el ratio entre dos tipos de unidades y desarrollar la conversión propia de unidades:</a></li>
         </ul>
       </li>
     </ul>
   </li>
-  <li><a href="#deployment">Deployment</a>    <ul>
-      <li><a href="#deploying-static-content-to-a-github-gh-pages-branch">Deploying static content to a Github gh-pages branch</a>        <ul>
+  <li><a href="#deployment">Implementación</a>    <ul>
+      <li><a href="#deploying-static-content-to-a-github-gh-pages-branch">Implementar contenido estático a un Github gh-pages branch</a>        <ul>
           <li><a href="#making-the-public-folder-track-the-gh-pages-branch">Making the <code>public/</code> folder track the gh-pages branch</a></li>
           <li><a href="#pushing-changes-to-gh-pages-branch">Pushing changes to gh-pages branch</a></li>
         </ul>
@@ -175,10 +175,10 @@ A live version of the readme is always available here:
       <li><a href="#creating-a-new-aws-lab-server">Creating a new AWS Lab Server</a></li>
     </ul>
   </li>
-  <li><a href="#references">References</a>    <ul>
-      <li><a href="#molecular-simulation">Molecular Simulation</a>        <ul>
-          <li><a href="#courses">Courses</a></li>
-          <li><a href="#reduced-units">Reduced Units</a></li>
+  <li><a href="#references">Referencias</a>    <ul>
+      <li><a href="#molecular-simulation">Simulación Molecular</a>        <ul>
+          <li><a href="#courses">Cursos</a></li>
+          <li><a href="#reduced-units">Unidades reducidas</a></li>
         </ul>
       </li>
       <li><a href="#javascript-library-runtime-dependencies">JavaScript Library Runtime Dependencies</a>        <ul>
@@ -224,10 +224,9 @@ A live version of the readme is always available here:
   </li>
 </ul>
 
-<h2 id="licensing">Licensing</h2>
+<h2 id="licensing">Licenciamiento</h2>
 
-<p>Lab is Copyright 2012 (c) by the Concord Consortium and is distributed under
-any of the following licenses:</p>
+<p>Lab es Copyright 2012 (c) del Concord Consortium y es distribuido bajo cualquiera de las siguientes licencias:</p>
 
 <ul>
   <li><a href="http://www.opensource.org/licenses/BSD-2-Clause">Simplified BSD</a>,</li>
@@ -235,15 +234,14 @@ any of the following licenses:</p>
   <li><a href="http://www.opensource.org/licenses/Apache-2.0">Apache 2.0</a>.</li>
 </ul>
 
-<p>The complete licensing details can be read <a href="license.html">here</a>.</p>
+<p>El detalle completo de las licencias puede leerse <a href="license.html">acá</a>.</p>
 
-<p>If you have have received a <strong>distribution archive</strong> of the
-<a href="https://github.com/concord-consortium/lab">Concord Consortium Lab project</a>
-our copyright applies to all resources <strong>except</strong> the files in the
-<code>vendor/</code> directory. The files in the <code>vendor/</code> directory are from
-third-parties and are distributed under either BSD, MIT, or Apache 2.0 licenses.</p>
+<p>Si recibió <strong>un archivo de distribución</strong> del proyecto
+<a href="https://github.com/concord-consortium/lab">Concord Consortium Lab </a>
+el copyright aplica a todos los recursos <strong>excepto</strong> los archivos en la carpeta
+<code>vendor/</code> . Los archivos en la carpeta <code>vendor/</code> son de terceras partes y son distribuidos bajo licencias BSD, MIT, o Apache 2.0.</p>
 
-<h2 id="model-type-examples">Model-type examples</h2>
+<h2 id="model-type-examples">Ejemplos de tipos de modelos</h2>
 
 <p>The Lab framework supports embedding multiple model-types into the Lab Interactive form.
 Each of the examples below also has an <strong>embeddable</strong> form that fluidly scales to the browser
@@ -259,15 +257,15 @@ A live version of the readme where these links work is always available here:
 <h4 id="md2d-basic-2d-molecular-modeling">MD2D: Basic 2D molecular modeling</h4>
 
 <ol>
-  <li><a href="interactives.html#interactives/samples/1-oil-and-water-shake.json">Oil and water</a>, <em>(<a href="embeddable.html#interactives/samples/1-oil-and-water-shake.json">embeddable</a>)</em></li>
-  <li><a href="interactives.html#interactives/samples/3-100-atoms.json">Charged and neutral atoms</a>, <em>(<a href="embeddable.html#interactives/samples/3-100-atoms.json">embeddable</a>)</em></li>
-  <li><a href="interactives.html#interactives/sam/gas-laws/3-volume-pressure-relationship.json">The volume-pressure relationship</a>, <em>(<a href="embeddable.html#interactives/sam/gas-laws/3-volume-pressure-relationship.json">embeddable</a>)</em></li>
-  <li><a href="interactives.html#interactives/sam/gas-laws/4-temperature-volume-relationship.json">The temperature-volume relationship</a>, <em>(<a href="embeddable.html#interactives/sam/gas-laws/4-temperature-volume-relationship.json">embeddable</a>)</em></li>
-  <li><a href="interactives.html#interactives/sam/phase-change/6-phase-changes-caused-by-energy-input-two-bar-graphs.json">Phase changes with two bar graphs</a>, <em>(<a href="embeddable.html#interactives/sam/phase-change/6-phase-changes-caused-by-energy-input-two-bar-graphs.json">embeddable</a>)</em></li>
-  <li><a href="interactives.html#interactives/sam/diffusion/2-temperature.json">Diffusion and temperature</a>, <em>(<a href="embeddable.html#interactives/sam/diffusion/2-temperature.json">embeddable</a>)</em></li>
-  <li><a href="interactives.html#interactives/visual/recycling/2-metalforces.json">Force and deformation in a metal-like material</a>, <em>(<a href="embeddable.html#interactives/visual/recycling/2-metalforces.json">embeddable</a>)</em></li>
-  <li><a href="interactives.html#interactives/visual/recycling/1-ceramicforces.json">Force and deformation in a ceramic-like material</a>, <em>(<a href="embeddable.html#interactives/visual/recycling/1-ceramicforces.json">embeddable</a>)</em></li>
-  <li><a href="interactives.html#interactives/visual/recycling/3-plasticforces.json">Force and deformation in a plastic-like material</a>, <em>(<a href="embeddable.html#interactives/visual/recycling/3-plasticforces.json">embeddable</a>)</em></li>
+  <li><a href="interactives.html#interactives/samples/1-oil-and-water-shake.json">Aceite y agua</a>, <em>(<a href="embeddable.html#interactives/samples/1-oil-and-water-shake.json">incrustable</a>)</em></li>
+  <li><a href="interactives.html#interactives/samples/3-100-atoms.json">Átomos neutros y cargados</a>, <em>(<a href="embeddable.html#interactives/samples/3-100-atoms.json">incrustable</a>)</em></li>
+  <li><a href="interactives.html#interactives/sam/gas-laws/3-volume-pressure-relationship.json">La relación volumen-presión</a>, <em>(<a href="embeddable.html#interactives/sam/gas-laws/3-volume-pressure-relationship.json">incrustable</a>)</em></li>
+  <li><a href="interactives.html#interactives/sam/gas-laws/4-temperature-volume-relationship.json">La relación temperatura-volumen</a>, <em>(<a href="embeddable.html#interactives/sam/gas-laws/4-temperature-volume-relationship.json">incrustable</a>)</em></li>
+  <li><a href="interactives.html#interactives/sam/phase-change/6-phase-changes-caused-by-energy-input-two-bar-graphs.json">Cambio de fases con dos gráficos de barra</a>, <em>(<a href="embeddable.html#interactives/sam/phase-change/6-phase-changes-caused-by-energy-input-two-bar-graphs.json">incrustable</a>)</em></li>
+  <li><a href="interactives.html#interactives/sam/diffusion/2-temperature.json">Difusión y temperatura</a>, <em>(<a href="embeddable.html#interactives/sam/diffusion/2-temperature.json">incrustable</a>)</em></li>
+  <li><a href="interactives.html#interactives/visual/recycling/2-metalforces.json">Fuerza y deformación en un material símil-metal</a>, <em>(<a href="embeddable.html#interactives/visual/recycling/2-metalforces.json">incrustable</a>)</em></li>
+  <li><a href="interactives.html#interactives/visual/recycling/1-ceramicforces.json">Fuerza y deformación en un material símil-cerámica</a>, <em>(<a href="embeddable.html#interactives/visual/recycling/1-ceramicforces.json">incrustable</a>)</em></li>
+  <li><a href="interactives.html#interactives/visual/recycling/3-plasticforces.json">Fuerza y deformación en un material símil-plástico</a>, <em>(<a href="embeddable.html#interactives/visual/recycling/3-plasticforces.json">incrustable</a>)</em></li>
 </ol>
 
 <h4 id="md2d-using-macroscopic-units-with-the-molecular-modeling-engine">MD2D: Using macroscopic units with the molecular modeling engine</h4>
@@ -277,25 +275,25 @@ to use the same engine with MKS macroscopic units. In the models listed below mo
 Coulomb forces is turned off and the Lennard-Jones force modeling has no effect.</p>
 
 <ol>
-  <li><a href="interactives.html#interactives/inquiry-space/pendulum/1-pendulum.json">Pendulum</a>, <em>(<a href="embeddable.html#interactives/inquiry-space/pendulum/1-pendulum.json">embeddable</a>)</em></li>
-  <li><a href="interactives.html#interactives/inquiry-space/pendulum/2-spring.json">Spring</a>, <em>(<a href="embeddable.html#interactives/inquiry-space/pendulum/2-spring.json">embeddable</a>)</em></li>
-  <li><a href="interactives.html#interactives/inquiry-space/pendulum/3-springy-pendulum.json">Springy pendulum</a>, <em>(<a href="embeddable.html#interactives/inquiry-space/pendulum/3-springy-pendulum.json">embeddable</a>)</em></li>
+  <li><a href="interactives.html#interactives/inquiry-space/pendulum/1-pendulum.json">Péndulo</a>, <em>(<a href="embeddable.html#interactives/inquiry-space/pendulum/1-pendulum.json">incrustable</a>)</em></li>
+  <li><a href="interactives.html#interactives/inquiry-space/pendulum/2-spring.json">Resorte</a>, <em>(<a href="embeddable.html#interactives/inquiry-space/pendulum/2-spring.json">incrustable</a>)</em></li>
+  <li><a href="interactives.html#interactives/inquiry-space/pendulum/3-springy-pendulum.json">Péndulo resorte</a>, <em>(<a href="embeddable.html#interactives/inquiry-space/pendulum/3-springy-pendulum.json">incrustable</a>)</em></li>
 </ol>
 
-<h4 id="md2d-protein-and-dna">MD2D: Protein and DNA</h4>
+<h4 id="md2d-protein-and-dna">MD2D: Proteína y ADN</h4>
 
-<p><em>Currently in early development.</em></p>
+<p><em>Actualmente en etapa de desarrollo temprano.</em></p>
 
 <ol>
-  <li><a href="interactives.html#interactives/samples/5-amino-acids.json">Protein folding</a>, <em>(<a href="embeddable.html#interactives/samples/5-amino-acids.json">embeddable</a>)</em></li>
-  <li><a href="interactives.html#interactives/sam/DNA-to-proteins/3-modeling-translation.json">DNA transcription and translation folding</a>, <em>(<a href="embeddable.html#interactives/sam/DNA-to-proteins/3-modeling-translation.json">embeddable</a>)</em></li>
+  <li><a href="interactives.html#interactives/samples/5-amino-acids.json">Plegado de proteínas</a>, <em>(<a href="embeddable.html#interactives/samples/5-amino-acids.json">incrustable</a>)</em></li>
+  <li><a href="interactives.html#interactives/sam/DNA-to-proteins/3-modeling-translation.json">Transcripción y traducción de ADN</a>, <em>(<a href="embeddable.html#interactives/sam/DNA-to-proteins/3-modeling-translation.json">incrustable</a>)</em></li>
 </ol>
 
-<h4 id="md2d-light-and-matter-simple-quantum-dymanics">MD2D: Light and Matter (simple quantum dymanics)</h4>
+<h4 id="md2d-light-and-matter-simple-quantum-dymanics">MD2D: Luz y Materia (dinámica cuántica simple)</h4>
 
-<p>A plugin for MD2D.</p>
+<p>Un plugin para MD2D.</p>
 
-<p><em>Currently in early development.</em></p>
+<p><em>Actualmente en etapa de desarrollo temprano.</em></p>
 
 <ol>
   <li><a href="interactives.html#interactives/conversion-tests/quantum-collision.json">Quantum collision</a>, <em>(<a href="embeddable.html#interactives/conversion-tests/quantum-collision.json">embeddable</a>)</em></li>
