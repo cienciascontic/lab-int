@@ -14624,7 +14624,7 @@ define('common/controllers/setup-banner',['lab.config','common/controllers/text-
     createElementInContainer({
       "type": "text",
       "id": "about-link",
-      "text": "About",
+      "text": "Acerca de",
       "onClick": function () {
         if (haveAboutText) {
           aboutDialog.open();
@@ -14658,9 +14658,9 @@ define('common/controllers/setup-banner',['lab.config','common/controllers/text-
       {
         "type": "text",
         "id": "share-link",
-        "text": "Share",
+        "text": "Compartir",
         "onClick": function () { shareDialog.open(); },
-        "tooltip": "Share using e-mail, IM or embed in website"
+        "tooltip": "Compartir a través de e-mail, IM o embebido en un sitio web"
       },
       {
         "id": "banner-middle",
@@ -14727,7 +14727,7 @@ define('common/controllers/setup-banner',['lab.config','common/controllers/text-
       "height": "2.5em",
       "width": "8.1em",
       "classes": ["credits"],
-      "tooltip": "Learn more about The Concord Consortium",
+      "tooltip": "Saber más sobre The Concord Consortium",
       "onClick": function () { creditsDialog.open(); }
     },
     {
@@ -14905,7 +14905,7 @@ define('common/controllers/about-dialog',['require','common/markdown-to-html','c
   AboutDialog.prototype.update = function(interactive) {
     var $aboutContent = $("<div>");
 
-    this.set("title", "About: " + interactive.title);
+    this.set("title", "Acerca de: " + interactive.title);
 
     if (interactive.subtitle) {
       $aboutContent.append(markdownToHTML(interactive.subtitle));
@@ -14918,9 +14918,9 @@ define('common/controllers/about-dialog',['require','common/markdown-to-html','c
   return AboutDialog;
 });
 
-define('text!common/controllers/share-dialog.tpl',[],function () { return '<div>\n  <h2>\n    Paste this\n    <a class=\'opens-in-new-window\' href=\'{{embeddableSharingUrl}}\' target=\'_blank\'>link</a>\n    in email or IM.\n  </h2>\n  <textarea>{{embeddableSharingUrl}}</textarea>\n  <h2>Paste HTML to embed in website or blog.</h2>\n  <p>Select Size:\n    <select id=\'iframe-size\'>\n      <option value=\'smaller\'>30% smaller</option>\n      <option selected value=\'actual\'>actual</option>\n      <option value=\'larger\'>50% larger</option>\n    </select>\n  </p>\n  <textarea id=\'share-iframe-content\'></textarea>\n  {{> copyright}}\n</div>\n';});
+define('text!common/controllers/share-dialog.tpl',[],function () { return '<div>\n  <h2>\n    Pegar este\n    <a class=\'opens-in-new-window\' href=\'{{embeddableSharingUrl}}\' target=\'_blank\'>link</a>\n    en email o IM.\n  </h2>\n  <textarea>{{embeddableSharingUrl}}</textarea>\n  <h2>Pegar el HTML para embeber en sitio web o blog.</h2>\n  <p>Elegir tamaño:\n    <select id=\'iframe-size\'>\n      <option value=\'smaller\'>30% más chico</option>\n      <option selected value=\'actual\'>actual</option>\n      <option value=\'larger\'>50% más grande</option>\n    </select>\n  </p>\n  <textarea id=\'share-iframe-content\'></textarea>\n  {{> copyright}}\n</div>\n';});
 
-define('text!common/controllers/copyright.tpl',[],function () { return '<div class="copyright-section"><strong>Copyright © 2013&nbsp;</strong><a class="opens-in-new-window" href="http://concord.org" id="share-license-link" target="_blank">The Concord Consortium</a>. All rights reserved. The software is licensed under&nbsp;<a class="opens-in-new-window" href="http://opensource.org/licenses/BSD-2-Clause" id="share-license-link" target="_blank">Simplified BSD</a>, <a class="opens-in-new-window" href="http://opensource.org/licenses/MIT" id="share-license-link" target="_blank">MIT</a> or <a class="opens-in-new-window" href="http://opensource.org/licenses/Apache-2.0" id="share-license-link" target="_blank">Apache 2.0</a> licenses. Please provide attribution to the Concord Consortium and the URL&nbsp;<a class="opens-in-new-window" href="http://concord.org/" id="share-license-link" target="_blank">http://concord.org</a>.</div>';});
+define('text!common/controllers/copyright.tpl',[],function () { return '<div class="copyright-section"><strong>Copyright © 2013&nbsp;</strong><a class="opens-in-new-window" href="http://concord.org" id="share-license-link" target="_blank">The Concord Consortium</a>. Todos los derechos reservados. El software está licenciado bajo licencias &nbsp;<a class="opens-in-new-window" href="http://opensource.org/licenses/BSD-2-Clause" id="share-license-link" target="_blank">Simplified BSD</a>, <a class="opens-in-new-window" href="http://opensource.org/licenses/MIT" id="share-license-link" target="_blank">MIT</a> o <a class="opens-in-new-window" href="http://opensource.org/licenses/Apache-2.0" id="share-license-link" target="_blank">Apache 2.0</a> . Por favor dar atribución a The Concord Consortium y a la URL&nbsp;<a class="opens-in-new-window" href="http://concord.org/" id="share-license-link" target="_blank">http://concord.org</a>.</div>';});
 
 /*global define, $ */
 define('common/controllers/share-dialog',['require','lab.config','mustache','common/inherit','common/controllers/basic-dialog','text!common/controllers/share-dialog.tpl','text!common/controllers/copyright.tpl'],function (require) {
@@ -15008,13 +15008,13 @@ define('common/controllers/share-dialog',['require','lab.config','mustache','com
    * @param {Object} interactive Interactive JSON definition.
    */
   ShareDialog.prototype.update = function(interactive) {
-    this.set("title", "Share: " + interactive.title);
+    this.set("title", "Compartir: " + interactive.title);
   };
 
   return ShareDialog;
 });
 
-define('text!common/controllers/credits-dialog.tpl',[],function () { return '<div>\n  <p>\n    This interactive was created by the <a href="{{concordUrl}}" target="_blank">Concord Consortium</a>\n    using our <a href="{{nextGenUrl}}" target="_blank">Next-Generation Molecular Workbench</a> software,\n    with funding by a grant from <a href="http://www.google.org/" target="_blank">Google.org</a>.\n   </p>\n   {{#showShareable}}\n   <p>\n      Find a <a href="{{interactiveCreditsUrl}}" class="opens-in-new-window" target="_blank">shareable version</a>\n      of this interactive along with dozens of other open-source interactives for science, math and engineering at\n      <a href="{{concordUrl}}" class="opens-in-new-window" target="_blank">concord.org</a>.\n    </p>\n    {{/showShareable}}\n  {{> copyright}}\n</div>\n';});
+define('text!common/controllers/credits-dialog.tpl',[],function () { return '<div>\n  <p>\n    Este interactivo fue creado por el <a href="{{concordUrl}}" target="_blank">Concord Consortium</a>\n    usando el software <a href="{{nextGenUrl}}" target="_blank">Next-Generation Molecular Workbench</a> ,\n    con fondos provenientes de un grant de <a href="http://www.google.org/" target="_blank">Google.org</a>.\n   </p>\n   {{#showShareable}}\n   <p>\n      Pueden encontrar una <a href="{{interactiveCreditsUrl}}" class="opens-in-new-window" target="_blank">versión para compartir</a>\n      de este interactivo junto a docenas de otros interactivos de código abierto para ciencias, matemática e ingeniería en\n      <a href="{{concordUrl}}" class="opens-in-new-window" target="_blank">concord.org</a>.\n    </p>\n    {{/showShareable}}\n  {{> copyright}}\n</div>\n';});
 
 /*global define */
 define('common/controllers/credits-dialog',['require','lab.config','mustache','common/inherit','common/controllers/basic-dialog','text!common/controllers/credits-dialog.tpl','text!common/controllers/copyright.tpl'],function (require) {
@@ -15049,7 +15049,7 @@ define('common/controllers/credits-dialog',['require','lab.config','mustache','c
         hash = document.location.hash,
         utmString;
 
-    this.set("title", "Credits: " + interactive.title);
+    this.set("title", "Créditos: " + interactive.title);
 
     if (labConfig.homeForSharing) {
       view.interactiveCreditsUrl = labConfig.homeForSharing + labConfig.homeEmbeddablePath + hash;
