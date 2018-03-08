@@ -1,9 +1,9 @@
 {
-  "title": "Oil and Water",
+  "title": "Aceite y agua",
   "publicationStatus": "sample",
-  "subtitle": "Explore how polar and non-polar substances interact.",
+  "subtitle": "Explorar cómo interactúan las sustancias polares y no-polares.",
   "about": [
-    "It is well known that \"oil and water don’t mix.\" But why? Run the model of",
+    "Es bien sabido that \"oil and water don’t mix.\" But why? Run the model of",
     "polar water (blue and red) and non-polar oil (gray). \"Shake up the oil and water",
     "mixture,\" then run it again and watch what happens to the molecules over time."
   ],
@@ -16,7 +16,7 @@
         "controlButtons": "play_reset",
         "textBoxes": [
           {
-            "text": "Separated oil and water",
+            "text": "Aceite y agua separados",
             "x": 1.08,
             "y": 2.0,
             "fontScale": 1.3,
