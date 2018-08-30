@@ -1,0 +1,274 @@
+{
+  "title": "Fracking 1",
+  "publicationStatus": "public",
+  "subtitle": "Drilling for Natural Gas",
+  "helpOnLoad": false,
+  "aboutOnLoad": true,
+  "about": [
+    "Explore the process of horizontal drilling and hydraulic fracturing to release",
+    "natural gas from shale layers.",
+    "",
+    "Press the **down** drilling button. Place your cursor at the land surface in the model, and click to start drilling.",
+    "The model will scroll to show deeper layers. When you reach the shale layer containing natural gas (indicated with ",
+    "moving red dots)",
+    "press the **left** or **right** drilling button to drill horizontally.",
+    "",
+    "When you are done drilling:",
+    "",
+    "1. Set off explosions to fracture the shale layer.",
+    "",
+    "2. Fill the pipe with water or propane to hydraulically fracture the shale further.",
+    "",
+    "3. Pump out the fracking fluid.",
+    "",
+    "The graph shows methane production for each well you drill. You can drill up to three wells."
+    ],
+    "credits": ["This [High-Adventure Science](http://has.concord.org \"High-Adventure Science\") interactive ",
+              "was developed under a series of grants from the [National Science Foundation](http://nsf.gov \"National Science Foundation\") ",
+              "(DRL-0929774, DRL-1220756 ) in partnership with the ",
+              "[National Geographic Society](http://nationalgeographic.org/education/ \"National Geographic Society\")."],
+  "theme": ["has", "standalone-playback","graph-title-bg"],
+  "aspectRatio": 1.2,
+  "fontScale": 0.8,
+  "models": [
+    {
+      "type": "iframe-model",
+      "id": "iframe-model",
+      "url": "models/lab-version/1/iframe-model/iframe-model.json",
+      "modelOptions":{
+        "url": "//models-resources.concord.org/agentscript/fracking/lab-embeddable.html#showEarthPatches",
+        "drillDirection": null
+      },
+      "viewOptions": {
+        "aspectRatio": 1.55,
+        "controlButtons": "play_reset"
+      },
+      "onLoad": [
+        "onPropertyChange('explosionPossible', function() {",
+        "  setComponentDisabled('explode-btn', !get('explosionPossible'));",
+        "});",
+        "onPropertyChange('fillPossible', function() {",
+        "  setComponentDisabled('fill-water-btn', !get('fillPossible'));",
+        "  setComponentDisabled('fill-propane-btn', !get('fillPossible'));",
+        "});",
+        "onPropertyChange('removeFluidPossible', function() {",
+        "  setComponentDisabled('pump-out-btn', !get('removeFluidPossible'));",
+        "});"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "name": "initialYear",
+      "initialValue": null
+    }
+  ],
+  "outputs": [
+    {
+      "name": "explosionPossible",
+      "value": "return iframeOutput('explosionPossible') || false;"
+    },
+    {
+      "name": "fillPossible",
+      "value": "return iframeOutput('fillPossible') || false;"
+    },
+    {
+      "name": "removeFluidPossible",
+      "value": "return iframeOutput('removeFluidPossible') || false;"
+    },
+    {
+      "name": "year",
+      "value": "return iframeOutput('year');"
+    },
+    {
+      "name": "graphYear",
+      "value": "return get('initialYear') ? get('year') - get('initialYear') : null;"
+    },
+    {
+      "name": "well0",
+      "value": "return iframeOutput('well0') || 0;"
+    },
+    {
+      "name": "well1",
+      "value": "return iframeOutput('well1') || 0;"
+    },
+    {
+      "name": "well2",
+      "value": "return iframeOutput('well2') || 0;"
+    },
+    {
+      "name": "wellsCombined",
+      "value": "return iframeOutput('wellsCombined') || 0;"
+    }
+  ],
+  "helpTips": [
+  ],
+  "components": [
+    {
+      "type": "radio",
+      "id": "drill",
+      "orientation": "horizontal",
+      "label": "Drill",
+      "labelOn": "top",
+      "style": "toggle",
+      "property": "drillDirection",
+      "options": [
+        {
+          "text": "<i class='fa fa-long-arrow-left'></i>",
+          "value": "left"
+        },
+        {
+          "text": "<i class='fa fa-long-arrow-down'></i>",
+          "value": "down"
+        },
+        {
+          "text": "<i class='fa fa-long-arrow-right'></i>",
+          "value": "right"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "id": "explode-btn",
+      "text": "Set off explosions",
+      "width": "20em",
+      "disabled": true,
+      "action": "explode()"
+    },
+    {
+      "type": "button",
+      "id": "fill-water-btn",
+      "text": "Fill with water",
+      "width": "9em",
+      "disabled": true,
+      "action": "floodWater()"
+    },
+    {
+      "type": "button",
+      "id": "fill-propane-btn",
+      "text": "Fill with propane",
+      "width": "9em",
+      "disabled": true,
+      "action": "floodPropane()"
+    },
+    {
+      "type": "button",
+      "id": "pump-out-btn",
+      "text": "Pump out fracking fluid",
+      "width": "20em",
+      "disabled": true,
+      "action": "pumpOut(); if (!get('initialYear')) { set('initialYear', get('year')); }"
+    },
+    {
+      "id": "methane-graph",
+      "type": "graph",
+      "properties": [
+        "well0",
+        "well1",
+        "well2",
+        "wellsCombined"
+      ],
+      "xProperty": "graphYear",
+      "title": "Methane Production",
+      "titlePosition": "left",
+      "buttonsLayout": "horizontal",
+      "buttonsStyle": "text",
+      "width": "100%",
+      "height": "100%",
+      "enableAxisScaling": false,
+      "enableZooming": false,
+      "xlabel": "Time (years)",
+      "xmin": 0,
+      "xmax": 40,
+      "ylabel": "Methane",
+      "ymin": 0,
+      "ymax": 600,
+      "xTickCount": 6,
+      "yTickCount": 6,
+      "xFormatter": "d",
+      "yFormatter": ".2r",
+      "dataColors": [
+        "#d95f02",
+        "#1b9e77",
+        "#7570B3",
+        "#000000"
+      ],
+      "legendLabels": [
+        "Well 1",
+        "Well 2",
+        "Well 3",
+        "Combined"
+      ]
+    },
+    {
+      "id": "playback",
+      "type": "playback",
+      "stepping": true
+    }
+  ],
+   "layout": {
+     "playback-container": [
+      "playback"
+    ],
+    
+    "bottom-1": [
+      "drill"
+    ],
+    "bottom-2": [
+      "explode-btn"
+    ],
+    "bottom-3": [
+      
+        "fill-water-btn"
+      ,
+      
+        "fill-propane-btn"
+      
+    ],
+    "bottom-4": [
+      "pump-out-btn"
+    ],
+    "right": [
+      "methane-graph"
+    ]
+  },
+  "template": [
+     {
+      "id": "playback-container",
+      "top": "model.bottom",
+      "left": "model.left"
+    },
+    {
+      "id": "bottom-1",
+      "left": "model.left",
+      "top": "playback-container.bottom",
+      "padding-top": "0.8em"
+    },
+    {
+      "id": "bottom-2",
+      "left": "model.left",
+      "top": "bottom-1.bottom",
+      "padding-top": "1.5em"
+    },
+    {
+      "id": "bottom-3",
+      "left": "model.left",
+      "top": "bottom-2.bottom",
+      "padding-top": "0.5em"
+    },
+    {
+      "id": "bottom-4",
+      "left": "model.left",
+      "top": "bottom-3.bottom",
+      "padding-top": "0.5em"
+    },
+    {
+      "id": "right",
+      "width": "model.width * 0.55",
+      "height": "model.height",
+      "left": "model.right",
+      "top": "model.top",
+      "padding-left": "0.3em"
+    }
+  ]
+}
