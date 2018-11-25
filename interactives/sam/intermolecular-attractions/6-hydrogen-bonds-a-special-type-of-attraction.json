@@ -1,13 +1,13 @@
 {
-  "title": "Hydrogen Bonds: A Special Type of Attraction",
+  "title": "Enlaces puente de hidrógeno: Un tipo especial de atracción",
   "publicationStatus": "public",
-  "subtitle": "Explore how polar molecules interact via hydrogen bonds.",
+  "subtitle": "Explorar cómo interactúan las moléculas polares a través de los enlaces hidrógeno.",
   "fontScale": 0.99,
   "about": [
-    "Explore hydrogen bonds forming between polar molecules, such as water. Hydrogen bonds are shown with dotted lines.",
+    "Explorar los enlaces de hidrógeno que se forman entre las moléculas polares, como el agua. Los enlaces de hidrógeno se muestran con líneas de puntos.",
     "",
-    "Show partial charges and run the model. Where do hydrogen bonds form? Try changing the temperature",
-    "of the model. How does the pattern of hydrogen bonding explain the lattice that makes up ice crystals?"
+    "Mostrar las cargas parciales y ejecutar el modelo. ¿Dónde se forman los enlaces hidrógeno? Probar cambiando la temperatura ",
+    "del modelo. ¿Cómo explica el patrón de enlaces hidrógeno la retícula que forma los cristales de hielo?"
   ],
   "models": [
     {
@@ -24,38 +24,38 @@
     {
       "type": "checkbox",
       "id": "show_bonds",
-      "text": "Show hydrogen bonds",
+      "text": "Mostrar enlaces hidrógeno",
       "property": "showVDWLines"
     },
     {
       "type": "checkbox",
       "id": "show_charge",
-      "text": "Show partial charges",
+      "text": "Mostrar cargas parciales",
       "property": "showChargeSymbols"
     },
     {
       "type": "checkbox",
       "id": "slow_motion2",
-      "text": "Slow motion",
+      "text": "Cámara lenta",
       "onClick": "if (value) { set({timeStep: 0.1}) } else { set({timeStep: 1})};"
     },
     {
       "type": "button",
       "id": "cool",
-      "text": "Cool",
+      "text": "Enfriar",
       "action": "adjustTemperature(0.9);"
     },
     {
       "type": "button",
       "id": "heat",
-      "text": "Heat",
+      "text": "Calentar",
       "action": "adjustTemperature(1.1); limitHighTemperature(25000);"
     },
     {
       "type": "barGraph",
       "id": "thermometer",
       "property": "temperature",
-      "title": "Thermometer",
+      "title": "Termómetro",
       "labels": 0,
       "min": 0,
       "max": 25000
