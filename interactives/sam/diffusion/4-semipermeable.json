@@ -1,7 +1,7 @@
 {
   "title": "Diffusion Across a Semipermeable Membrane",
   "publicationStatus": "public",
-  "subtitle": "How does pore size affect the diffusion of different molecules?",
+  "subtitle": "¿Cómo afecta la difusión de diferentes moléculas el tamaño del poro?",
   "about": "Las membranas biológicas son selectivamente permeables; algunas moléculas pueden cruzar mientras que otras no. Una forma de afectar esto es a través del tamaño de poro. Cambie el tamaño de poro con el control deslizante para cambiar la permeabilidad de la membrana a los diferentes tipos de moléculas. Sigue una molécula individual para ver el camino que toma.",
   "aspectRatio": 1.2,
   "models": [
